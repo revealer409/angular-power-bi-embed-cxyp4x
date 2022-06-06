@@ -1,0 +1,35 @@
+.base-block {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  box-sizing: border-box;
+  height: 100%;
+
+  .header {
+    text-align: center;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  .powerbi-block {
+    flex-grow: 1;
+    max-height: calc(100% - 40px);
+    width: calc(100% - 2px);
+    border: 1px solid #ccc;
+
+    ::ng-deep iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
